@@ -14,6 +14,9 @@ syntax enable
 " エンコーディング
 set encoding=utf-8
 
+" システム
+set clipboard+=unnamed
+
 " 表示
 set number
 set autoindent
