@@ -6,6 +6,8 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'Shougo/neocomplcache'
+
 
 filetype plugin indent on
 syntax enable
@@ -22,3 +24,5 @@ set ts=4 sw=4 sts=4
 nnoremap j gj
 nnoremap k gk
 
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
