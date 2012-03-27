@@ -1,18 +1,30 @@
 set nocompatible
+
+""" エンコーディング
+set encoding=utf-8
+scriptencoding utf-8
+
+""" ユーザーランタイムパス
+if isdirectory($HOME . '/.vim')
+  let $MY_VIMRUNTIME = $HOME.'/.vim'
+elseif isdirectory($HOME . '\vimfiles')
+  let $MY_VIMRUNTIME = $HOME.'\vimfiles'
+elseif isdirectory($VIM . '\vimfiles')
+  let $MY_VIMRUNTIME = $VIM.'\vimfiles'
+endif 
+
+""" Vundle
 filetype off
 
-set rtp+=~/.vim/vundle.git
+set rtp+=$MY_VIMRUNTIME/vundle.git
 call vundle#rc()
 
 Bundle 'Shougo/neocomplcache'
 
 
-
 filetype plugin indent on
 syntax enable
 
-""" エンコーディング
-set encoding=utf-8
 
 """ システム
 "クリップボードを共有
