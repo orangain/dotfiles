@@ -17,7 +17,7 @@ endif
 filetype off
 
 set rtp+=$MY_VIMRUNTIME/vundle.git
-call vundle#rc()
+call vundle#rc('$MY_VIMRUNTIME/bundle/')
 
 Bundle 'Shougo/neocomplcache'
 
