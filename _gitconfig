@@ -1,0 +1,8 @@
+[user]
+	name = orangain
+	email = orangain@gmail.com
+[alias]
+	ci = commit
+	st = status
+	pul = pull
+
