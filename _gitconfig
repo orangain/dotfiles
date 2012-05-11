@@ -5,4 +5,5 @@
 	ci = commit
 	st = status
 	pul = pull
+	dif = diff
 
