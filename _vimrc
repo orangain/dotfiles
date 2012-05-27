@@ -79,7 +79,7 @@ set hlsearch
 
 
 """ キーマップ
-"カーソルとj k では表示行で移動する。物理行移動は<C-n>,<C-p>
+"カーソルとj k では表示行で移動する。物理行移動は<C-n>,<C-p>（と思ってたけどタブの操作に割り当てたので、どうしよう）
 "キーボードマクロには物理行移動を推奨
 "h l は行末、行頭を超えることが可能に設定(whichwrap)
 noremap <Down> gj
@@ -100,6 +100,10 @@ nnoremap <C-h> :<C-u>help<Space>
 nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<Enter>
 onoremap gc :<C-u>normal gc<Enter>
+
+"タブの切替
+nnoremap <C-n> gt
+nnoremap <C-p> gT
 
 """ プラグイン
 "neocomplcache
