@@ -105,6 +105,9 @@ onoremap gc :<C-u>normal gc<Enter>
 nnoremap <C-n> gt
 nnoremap <C-p> gT
 
+"Esc連打で検索ハイライトを消去
+nnoremap <Esc><Esc> :nohlsearch<Return><Esc>
+
 """ プラグイン
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1
