@@ -20,6 +20,7 @@ set rtp+=$MY_VIMRUNTIME/vundle
 call vundle#rc('$MY_VIMRUNTIME/bundle/')
 
 Bundle 'Shougo/neocomplcache'
+Bundle 'ciaranm/inkpot'
 
 
 filetype plugin indent on
@@ -47,6 +48,8 @@ set number
 set autoindent
 "タブの幅
 set ts=4 sw=4 sts=4
+"色テーマ設定（gvimの色テーマは.gvimrcで指定する）
+colorscheme inkpot
 
 """ 検索
 "大文字小文字を区別しない。ただし検索語が大文字小文字の両方を含む場合は区別する。
