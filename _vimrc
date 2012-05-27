@@ -74,16 +74,17 @@ set incsearch
 "検索語のハイライト
 set hlsearch
 
+
 """ キーマップ
 "カーソルとj k では表示行で移動する。物理行移動は<C-n>,<C-p>
 "キーボードマクロには物理行移動を推奨
 "h l は行末、行頭を超えることが可能に設定(whichwrap)
-nnoremap <Down> gj
-nnoremap <Up>   gk
-nnoremap j gj
-nnoremap k gk
-nnoremap h <Left>
-nnoremap l <Right>
+noremap <Down> gj
+noremap <Up>   gk
+noremap j gj
+noremap k gk
+noremap h <Left>
+noremap l <Right>
 "l を <Right>に置き換えても、折りたたみを l で開くことができるようにする
 if has('folding')
   nnoremap <expr> l foldlevel(line('.')) ? "\<Right>zo" : "\<Right>"
