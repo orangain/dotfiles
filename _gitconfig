@@ -6,4 +6,5 @@
 	st = status
 	pul = pull
 	dif = diff
+	co = checkout
 
