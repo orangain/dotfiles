@@ -1,2 +1,6 @@
+" gvim用のstatuslineの高さ設定
+set cmdheight=1
+set laststatus=2
+
 " gvim用のcolorscheme
 colorscheme inkpot

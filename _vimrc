@@ -48,6 +48,18 @@ set number
 set autoindent
 "タブの幅
 set ts=4 sw=4 sts=4
+"コマンドラインの高さ (gvimはgvimrcで指定)
+set cmdheight=1
+set laststatus=2
+"コマンドをステータス行に表示
+set showcmd
+"画面最後の行をできる限り表示する
+set display=lastline
+"Tab、行末の半角スペースを明示的に表示する
+set list
+set listchars=tab:^\ ",trail:~
+"ステータスライン
+set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
 "色テーマ設定（gvimの色テーマは.gvimrcで指定する）
 colorscheme inkpot
 
