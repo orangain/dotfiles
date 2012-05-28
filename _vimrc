@@ -71,7 +71,7 @@ set listchars=tab:^\ ",trail:~
 "ステータスライン
 set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
 "色テーマ設定（gvimの色テーマは.gvimrcで指定する）
-colorscheme inkpot
+"colorscheme inkpot
 
 """ 検索
 "大文字小文字を区別しない。ただし検索語が大文字小文字の両方を含む場合は区別する。
