@@ -1,8 +1,15 @@
 set nocompatible
 
 """ エンコーディング
-set encoding=utf-8
+" 参考: http://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-utf8
+" encodingをUTF-8にするとWindowsのコマンドライン版で漢字が入力できなくなるので、その他の場合だけUTF-8にする。
+if has('gui_running') && !has('unix')
+  set encoding=utf-8
+endif
+" このスクリプト自体のエンコーディングを指定する。
 scriptencoding utf-8
+"ファイルを開く際のエンコーディングを指定
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp,default,latin
 
 """ ユーザーランタイムパス
 if isdirectory($HOME . '/.vim')
