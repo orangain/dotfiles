@@ -42,7 +42,7 @@ set backspace=indent,eol,start
 set ambiwidth=double
 "幅によって自動的にテキスト整形されないようにする
 "rとoを削除すれば、コメントが自動的に挿入される挙動をキャンセルできる
-set formatoptions=roql
+set formatoptions=ql
 
 """ 表示
 "行番号を表示
