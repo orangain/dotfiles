@@ -4,3 +4,11 @@ set laststatus=2
 
 " gvim用のcolorscheme
 colorscheme inkpot
+
+""" IME
+" 挿入モードや検索の際に日本語入力がONになるのを防ぐ
+set iminsert=0
+set imsearch=0
+inoremap <ESC> <ESC>:set iminsert=0<CR>
+nnoremap / :set imsearch=0<CR>/
+nnoremap ? :set imsearch=0<CR>?
