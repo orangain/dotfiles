@@ -48,8 +48,9 @@ set backspace=indent,eol,start
 "□や○の文字があってもカーソル位置がずれないようにする
 set ambiwidth=double
 "幅によって自動的にテキスト整形されないようにする
-"rとoを削除すれば、コメントが自動的に挿入される挙動をキャンセルできる
+"コメントが自動的に挿入されないようにする
 set formatoptions=ql
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """ 表示
 "行番号を表示
