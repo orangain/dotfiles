@@ -12,3 +12,5 @@ set imsearch=0
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 nnoremap / :set imsearch=0<CR>/
 nnoremap ? :set imsearch=0<CR>?
+
+set guioptions-=T
