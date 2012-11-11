@@ -28,7 +28,7 @@ call vundle#rc('$MY_VIMRUNTIME/bundle/')
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/inkpot'
-
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
 syntax enable
