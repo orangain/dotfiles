@@ -29,6 +29,7 @@ call vundle#rc('$MY_VIMRUNTIME/bundle/')
 Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/inkpot'
 Bundle 'scrooloose/nerdtree'
+Bundle 'taglist.vim'
 
 filetype plugin indent on
 syntax enable
