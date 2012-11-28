@@ -7,4 +7,5 @@
 	pul = pull
 	dif = diff
 	co = checkout
-
+[core]
+	excludesfile = ~/.gitignore

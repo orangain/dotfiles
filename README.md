@@ -5,6 +5,8 @@ Getting Started
 ```
 git clone https://github.com/orangain/dotfiles
 
+ln -s dotfiles/_gitignore ~/.gitignore
+ln -s dotfiles/_gitconfig ~/.gitconfig
 ln -s dotfiles/vimfiles ~/.vim
 ln -s dotfiles/_vimrc ~/.vimrc
 ln -s dotfiles/_gvimrc ~/.gvimrc
