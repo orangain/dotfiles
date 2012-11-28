@@ -11,8 +11,7 @@ ln -s dotfiles/vimfiles ~/.vim
 ln -s dotfiles/_vimrc ~/.vimrc
 ln -s dotfiles/_gvimrc ~/.gvimrc
 
-git submodule init
-git submodule update
+git submodule update --init
 
 vim
 # then type :BundleInstall
