@@ -29,7 +29,10 @@ call vundle#rc('$MY_VIMRUNTIME/bundle/')
 Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/inkpot'
 Bundle 'scrooloose/nerdtree'
-Bundle 'taglist.vim'
+
+if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
+	Bundle 'taglist.vim'
+endif
 
 filetype plugin indent on
 syntax enable
