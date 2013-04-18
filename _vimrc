@@ -10,6 +10,8 @@ endif
 scriptencoding utf-8
 "ファイルを開く際のエンコーディングを指定
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp,default,latin
+"改行コードはWindowsでもUnixを優先
+set fileformats=unix,dos,mac
 
 """ ユーザーランタイムパス
 if isdirectory($HOME . '/.vim')
