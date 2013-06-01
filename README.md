@@ -5,23 +5,9 @@ Getting Started
 ```
 git clone https://github.com/orangain/dotfiles
 
-ln -s dotfiles/_gitignore ~/.gitignore
-ln -s dotfiles/_gitconfig ~/.gitconfig
-ln -s dotfiles/vimfiles ~/.vim
-ln -s dotfiles/_vimrc ~/.vimrc
-ln -s dotfiles/_gvimrc ~/.gvimrc
+./dotfiles/setup.sh
 
-if [ -f ~/.bashrc ]; then
-	echo "source dotfiles/_bashrc" >> .bashrc
-else
-	echo "source dotfiles/_bashrc" >> .bash_profile
-fi
-
-cd dotfiles
-git submodule update --init
-
-vim
-# then type :BundleInstall
+# then execute vim & type :BundleInstall
 ```
 
 In Windows XP

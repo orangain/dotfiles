@@ -1,6 +1,11 @@
+#!/bin/sh
+
+set -ex
+
 cwd=$( cd `dirname ${0}` && pwd )
 
-ln -s $cwd/vimfiles ~/.vim
-ln -s $cwd/_vimrc ~/.vimrc
-ln -s $cwd/_gvimrc ~/.gvimrc
-ln -s $cwd/_gitconfig ~/.gitconfig
+ln -sf $cwd/vimfiles ~/.vim
+ln -sf $cwd/_vimrc ~/.vimrc
+ln -sf $cwd/_gvimrc ~/.gvimrc
+ln -sf $cwd/_gitconfig ~/.gitconfig
+ln -sf $cwd/_gitignore ~/.gitignore
