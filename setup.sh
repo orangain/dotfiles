@@ -12,7 +12,7 @@ else
     echo ". dotfiles/_bashrc" >> ~/.bash_profile
 fi
 
-$(cd dotfiles; git submodule update --init)
+(cd dotfiles; git submodule update --init)
 
 echo "Setup completed."
 echo "Execute vim & type :BundleInstall"
