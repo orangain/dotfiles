@@ -76,7 +76,7 @@ set display=lastline
 set list
 set listchars=tab:^\ ",trail:~
 "ステータスライン
-set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
+set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P
 "色テーマ設定（gvimの色テーマは.gvimrcで指定する）
 "colorscheme inkpot
 
