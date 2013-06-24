@@ -20,7 +20,7 @@ elseif isdirectory($HOME . '\vimfiles')
   let $MY_VIMRUNTIME = $HOME.'\vimfiles'
 elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles'
-endif 
+endif
 
 """ Vundle
 filetype off
@@ -99,7 +99,7 @@ set smartcase
 "最後まで行ったら最初から検索する。
 set wrapscan
 "インクリメンタルサーチ
-set incsearch 
+set incsearch
 "検索語のハイライト
 set hlsearch
 
