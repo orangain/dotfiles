@@ -66,6 +66,10 @@ set number
 set autoindent
 "タブの幅
 set ts=4 sw=4 sts=4
+" '<'や'>'でインデントする際に'shiftwidth'の倍数に丸める
+set shiftround
+" 80文字目にラインを入れる
+set colorcolumn=80
 "コマンドラインの高さ (gvimはgvimrcで指定)
 set cmdheight=1
 set laststatus=2
