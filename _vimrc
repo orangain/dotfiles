@@ -137,6 +137,11 @@ nnoremap <Esc><Esc> :nohlsearch<Return><Esc>
 "<Space-d> で a.hoge を a['hoge'] に変換する（hogeにカーソルがある状態で実行）
 noremap <Space>d F.r[a'<Esc>wwi']<Esc>
 
+"ノーマルモードでEnter押したら改行挿入
+noremap <CR> o<ESC>
+"Shift+Enterで上の行に挿入
+noremap <S-CR> O<ESC>
+
 """ プラグイン
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1
