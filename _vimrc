@@ -31,6 +31,7 @@ call vundle#rc('$MY_VIMRUNTIME/bundle/')
 Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/inkpot'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
