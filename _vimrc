@@ -92,8 +92,9 @@ augroup END
 "colorscheme inkpot
 
 """ 検索
-"大文字小文字を区別しない。ただし検索語が大文字小文字の両方を含む場合は区別する。
+"大文字小文字を区別しない。
 set ignorecase
+"ただし検索語が大文字小文字の両方を含む場合は区別する。
 set smartcase
 "最後まで行ったら最初から検索する。
 set wrapscan
