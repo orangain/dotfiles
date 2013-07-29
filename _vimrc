@@ -90,6 +90,12 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
+"nbspをハイライトする（listcharsが効かないのはなんでだろ）
+augroup HighlightSpecialSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight SpecialSpaces term=underline guibg=DarkGreen ctermbg=Red
+  autocmd VimEnter,WinEnter * match SpecialSpaces /\%u00A0/
+augroup END
 "色テーマ設定（gvimの色テーマは.gvimrcで指定する）
 "colorscheme inkpot
 
