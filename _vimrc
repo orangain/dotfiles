@@ -150,6 +150,9 @@ noremap <Space>d F.r[a'<Esc>wwi']<Esc>
 noremap <CR> o<ESC>
 "Shift+Enterで上の行に挿入
 noremap <S-CR> O<ESC>
+"quickfixでは改行を挿入しない
+"See: http://stackoverflow.com/questions/11983282/vim-how-to-map-command-according-to-buffer-type
+:autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 """ プラグイン
 "neocomplcache
