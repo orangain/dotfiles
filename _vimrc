@@ -32,6 +32,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/inkpot'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
+Bundle 'nvie/vim-flake8'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
@@ -153,3 +154,7 @@ noremap <S-CR> O<ESC>
 """ プラグイン
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+
+"flake8
+"保存時に実行
+autocmd BufWritePost *.py call Flake8()
