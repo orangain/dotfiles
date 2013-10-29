@@ -161,5 +161,7 @@ nnoremap <S-CR> O<ESC>
 let g:neocomplcache_enable_at_startup = 1
 
 "flake8
+"1行は99文字まで
+let g:flake8_max_line_length=99
 "保存時に実行
 autocmd BufWritePost *.py call Flake8()
