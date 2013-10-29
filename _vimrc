@@ -123,6 +123,8 @@ noremap j gj
 noremap k gk
 noremap h <Left>
 noremap l <Right>
+noremap gj j
+noremap gk k
 "l を <Right>に置き換えても、折りたたみを l で開くことができるようにする
 if has('folding')
   nnoremap <expr> l foldlevel(line('.')) ? "\<Right>zo" : "\<Right>"
