@@ -85,18 +85,17 @@ set list
 set listchars=tab:^\ ",trail:~
 "ステータスライン
 set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P
-"行末のスペースをハイライトする
-augroup HighlightTrailingSpaces
+
+augroup Highlights
   autocmd!
+  "行末のスペースをハイライトする
   autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
-  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+  autocmd VimEnter,WinEnter * let m1 = matchadd("TrailingSpaces", '\s\+$')
+  "nbspをハイライトする（listcharsが効かないのはなんでだろ）
+  autocmd VimEnter,WinEnter,ColorScheme * highlight SpecialSpaces term=underline guibg=DarkGreen ctermbg=Green
+  autocmd VimEnter,WinEnter * let m2 = matchadd("SpecialSpaces", '\%u00A0')
 augroup END
-"nbspをハイライトする（listcharsが効かないのはなんでだろ）
-augroup HighlightSpecialSpaces
-  autocmd!
-  autocmd VimEnter,WinEnter,ColorScheme * highlight SpecialSpaces term=underline guibg=DarkGreen ctermbg=Red
-  autocmd VimEnter,WinEnter * match SpecialSpaces /\%u00A0/
-augroup END
+
 "色テーマ設定（gvimの色テーマは.gvimrcで指定する）
 "colorscheme inkpot
 
