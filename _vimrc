@@ -33,6 +33,7 @@ Bundle 'ciaranm/inkpot'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'nvie/vim-flake8'
+Bundle 'hynek/vim-python-pep8-indent'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
