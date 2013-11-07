@@ -154,8 +154,9 @@ nnoremap <CR> o<ESC>
 "Shift+Enterで上の行に挿入
 nnoremap <S-CR> O<ESC>
 "quickfixでは改行を挿入しない
+"See: http://yakinikunotare.boo.jp/orebase2/vim/another_setting_in_quickfix_window
 "See: http://stackoverflow.com/questions/11983282/vim-how-to-map-command-according-to-buffer-type
-:autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+autocmd FileType qf nnoremap <buffer> <CR> <CR>
 
 """ プラグイン
 "neocomplcache
