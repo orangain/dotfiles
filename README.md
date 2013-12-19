@@ -10,11 +10,21 @@ git clone https://github.com/orangain/dotfiles
 # then execute vim & type :BundleInstall
 ```
 
-In Windows XP
--------------
+In Windows 7
+------------
+
+### Run as Administrator
 
 ```
-fsutil hardlink create $HOME\_vimrc dotfiles\_vimrc
-fsutil hardlink create $HOME\_gvimrc dotfiles\_gvimrc
-linkd $HOME\vimfiles dotfiles\vimfiles
+cd %USERPROFILE%\dotfiles
+mklink %USERPROFILE%\_vimrc dotfiles\_vimrc
+mklink %USERPROFILE%\_gvimrc dotfiles\_gvimrc
+mklink /d %USERPROFILE%\vimfiles dotfiles\vimfiles
+```
+
+### Run as Normal User
+
+```
+cd %USERPROFILE%\dotfiles
+git submodule update --init
 ```
