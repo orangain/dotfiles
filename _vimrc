@@ -32,9 +32,9 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/inkpot'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
-Bundle 'nvie/vim-flake8'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/syntastic'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
@@ -162,8 +162,9 @@ autocmd FileType qf nnoremap <buffer> <CR> <CR>
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 
-"flake8
-"1行は99文字まで
-let g:flake8_max_line_length=99
-"保存時に実行
-autocmd BufWritePost *.py call Flake8()
+"syntastic
+let g:syntastic_always_populate_loc_list=1
+"自動でエラーリストを表示する
+let g:syntastic_auto_loc_list=1
+"flake8で1行は99文字まで
+let g:syntastic_python_flake8_args="--max-line-length=99"
