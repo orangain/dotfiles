@@ -35,6 +35,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
+Bundle 'Blackrush/vim-gocode'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
@@ -165,6 +166,10 @@ autocmd FileType qf nnoremap <buffer> <CR> <CR>
 """ プラグイン
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+if !exists('g:neocomplcache_omni_patterns')
+	let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_omni_patterns.go = '\h\w*\.\?'
 
 "syntastic
 let g:syntastic_always_populate_loc_list=1
