@@ -40,6 +40,10 @@ if executable('exuberant-ctags') || executable('exctags') || executable('ctags')
 	Bundle 'taglist.vim'
 endif
 
+""" Go lang
+filetype plugin indent off
+set runtimepath+=/usr/local/Cellar/go/1.2/libexec/misc/vim
+
 filetype plugin indent on
 syntax enable
 
