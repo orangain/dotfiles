@@ -167,9 +167,23 @@ autocmd FileType qf nnoremap <buffer> <CR> <CR>
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 if !exists('g:neocomplcache_omni_patterns')
-	let g:neocomplcache_force_omni_patterns = {}
+	let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_force_omni_patterns.go = '\h\w*\.\?'
+let g:neocomplcache_omni_patterns.go = '\h\w*\.\?'
+"Disable preview window
+set completeopt-=preview
+
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplcache#smart_close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><Down> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr><Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
 "syntastic
 let g:syntastic_always_populate_loc_list=1
