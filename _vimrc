@@ -36,6 +36,7 @@ Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'pangloss/vim-javascript'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
