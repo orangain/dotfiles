@@ -14,3 +14,7 @@ nnoremap / :set imsearch=0<CR>/
 nnoremap ? :set imsearch=0<CR>?
 
 set guioptions-=T
+
+" 常にタブを表示
+" See: http://www.mk-mode.com/octopress/2012/06/04/04002036/
+set showtabline=2
