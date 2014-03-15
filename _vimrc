@@ -138,6 +138,10 @@ if has('folding')
   nnoremap <expr> l foldlevel(line('.')) ? "\<Right>zo" : "\<Right>"
 endif
 
+"Jで行を結合するときにスペースを入れないようにする
+noremap J gJ
+noremap gJ J
+
 "ヘルプを<C-h>で引く (WEB+DB Press Vol. 52)
 nnoremap <C-h> :<C-u>help<Space>
 
