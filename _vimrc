@@ -199,3 +199,5 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_python_flake8_args="--max-line-length=99"
 "Use gjslint
 let g:syntastic_javascript_checkers = ['gjslint']
+"gjslintで1行は99文字まで
+let g:syntastic_javascript_gjslint_args="--max_line_length=99"
