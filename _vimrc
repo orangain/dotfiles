@@ -138,8 +138,11 @@ if has('folding')
   nnoremap <expr> l foldlevel(line('.')) ? "\<Right>zo" : "\<Right>"
 endif
 
-"Jで行を結合するときにスペースを入れないようにする
-noremap J gJ
+"Jで行を結合するときにスペースを入れないようにする。
+"単にJxに割り当てると行末尾に空白があった場合に、行頭にあった文字が削除されてしまうので
+"行末尾の空白を消してからJxを実行する。
+noremap <silent> J :s/\s*$//<CR>Jx:nohlsearch<Return>
+"gJは特に使わないので、Jを割り当てる。
 noremap gJ J
 
 "ヘルプを<C-h>で引く (WEB+DB Press Vol. 52)
