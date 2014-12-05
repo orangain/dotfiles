@@ -164,6 +164,8 @@ nnoremap <Esc><Esc> :nohlsearch<Return><Esc>
 
 "<Space-d> で a.hoge を a['hoge'] に変換する（hogeにカーソルがある状態で実行）
 noremap <Space>d F.r[a'<Esc>wwi']<Esc>
+"<Space-D> で a['hoge'] を a.hoge に変換する（hogeにカーソルがある状態で実行）
+noremap <Space>D f]xdhF[xxi.<Esc>
 
 "ノーマルモードでEnter押したら改行挿入
 nnoremap <CR> o<ESC>
