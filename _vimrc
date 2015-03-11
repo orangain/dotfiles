@@ -40,6 +40,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'rhysd/clever-f.vim'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'moro/vim-review'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
