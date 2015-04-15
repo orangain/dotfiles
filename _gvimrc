@@ -19,3 +19,5 @@ set guioptions-=T
 " 常にタブを表示
 " See: http://www.mk-mode.com/octopress/2012/06/04/04002036/
 set showtabline=2
+" タブにフルパスではなくファイル名を表示
+:set guitablabel=%M%t
