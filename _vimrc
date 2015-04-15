@@ -209,3 +209,5 @@ let g:syntastic_python_flake8_args="--max-line-length=99"
 let g:syntastic_javascript_checkers = ['gjslint']
 "gjslintで1行は99文字まで
 let g:syntastic_javascript_gjslint_args="--max_line_length=99"
+"javacの出力をUTF-8にする
+let g:syntastic_java_javac_options="-Xlint -J-Dfile.encoding=UTF-8"
