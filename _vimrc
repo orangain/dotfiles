@@ -96,7 +96,22 @@ set display=lastline
 set list
 set listchars=tab:^\ ",trail:~
 "ステータスライン
-set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ [%02B](%v,%l)/%L%8P
+" < -   Where to truncate line if too long.  Default is at the start. No width fields allowed.
+" f S   Path to the file in the buffer, as typed or relative to current directory.
+" m F   Modified flag, text is "[+]"; "[-]" if 'modifiable' is off.
+" r F   Readonly flag, text is "[RO]".
+" h F   Help buffer flag, text is "[help]".
+" w F   Preview window flag, text is "[Preview]".
+" { NF  Evaluate expression between '%{' and '}' and substitute result.
+"       Note that there is no '%' before the closing '}'.
+" = -   Separation point between left and right aligned items. No width fields allowed.
+" B N   Value of character under cursor in hexadecimal.
+" v N   Virtual column number.
+" l N   Line number.
+" L N   Number of lines in buffer.
+" P S   Percentage through file of displayed window.  This is like the
+"       percentage described for 'ruler'. Always 3 in length.
+set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ [U+%04.B](%v,%l)/%L%8P
 
 augroup Highlights
   autocmd!
