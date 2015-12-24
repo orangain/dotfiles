@@ -40,7 +40,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'rhysd/clever-f.vim'
 Bundle 'editorconfig/editorconfig-vim'
-Bundle 'moro/vim-review'
+Bundle 'orangain/vim-review'
 Bundle 'coot/CRDispatcher'
 Bundle 'coot/EnchantedVim'
 
