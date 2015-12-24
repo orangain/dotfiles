@@ -22,3 +22,8 @@ set guioptions-=T
 set showtabline=2
 " タブにフルパスではなくファイル名を表示
 :set guitablabel=%M%t
+
+""" Key map
+"タブの切替 (iTermと同じCommand+左右)
+nnoremap <D-Right> gt
+nnoremap <D-Left> gT

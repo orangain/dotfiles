@@ -173,10 +173,6 @@ nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<Enter>
 onoremap gc :<C-u>normal gc<Enter>
 
-"タブの切替
-nnoremap <C-n> gt
-nnoremap <C-p> gT
-
 "Esc連打で検索ハイライトを消去
 nnoremap <Esc><Esc> :nohlsearch<Return><Esc>
 " 検索・置換時にvery magicを有効にし、メタ文字をエスケープせずに使えるようにする。
