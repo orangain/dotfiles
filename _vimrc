@@ -41,6 +41,8 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'rhysd/clever-f.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'moro/vim-review'
+Bundle 'coot/CRDispatcher'
+Bundle 'coot/EnchantedVim'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
 	Bundle 'taglist.vim'
@@ -177,6 +179,28 @@ nnoremap <C-p> gT
 
 "Esc連打で検索ハイライトを消去
 nnoremap <Esc><Esc> :nohlsearch<Return><Esc>
+" 検索・置換時にvery magicを有効にし、メタ文字をエスケープせずに使えるようにする。
+" ※普通にEnchanted Vimを有効にするとincsearchが使えなくなるので、/と?はキーマップで実現する。
+" See: http://stackoverflow.com/questions/3760444/in-vim-is-there-a-way-to-set-very-magic-permanently-and-globally
+let g:VeryMagic = 0
+nnoremap / /\v
+nnoremap ? ?\v
+vnoremap / /\v
+vnoremap ? ?\v
+" If I type // or ??, I don't EVER want \v, since I'm repeating the previous search.
+noremap // //
+noremap ?? ??
+" Turn on all other features.
+let g:VeryMagicSubstituteNormalise = 1
+let g:VeryMagicSubstitute = 1
+let g:VeryMagicGlobal = 1
+let g:VeryMagicVimGrep = 1
+let g:VeryMagicSearchArg = 1
+let g:VeryMagicFunction = 1
+let g:VeryMagicHelpgrep = 1
+let g:VeryMagicRange = 1
+let g:VeryMagicEscapeBackslashesInSearchArg = 1
+let g:SortEditArgs = 1
 
 "<Space-d> で a.hoge を a['hoge'] に変換する（hogeにカーソルがある状態で実行）
 noremap <Space>d F.r[a'<Esc>wwi']<Esc>
