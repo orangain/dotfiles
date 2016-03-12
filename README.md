@@ -6,8 +6,6 @@ Getting Started
 git clone https://github.com/orangain/dotfiles
 
 ./dotfiles/setup.sh
-
-# then execute vim & type :BundleInstall
 ```
 
 In Windows 7
@@ -27,4 +25,5 @@ mklink /d %USERPROFILE%\vimfiles dotfiles\vimfiles
 ```
 cd %USERPROFILE%\dotfiles
 git submodule update --init
+# then execute vim & type :BundleInstall
 ```
