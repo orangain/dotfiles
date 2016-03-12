@@ -183,9 +183,6 @@ nnoremap / /\v
 nnoremap ? ?\v
 vnoremap / /\v
 vnoremap ? ?\v
-" If I type // or ??, I don't EVER want \v, since I'm repeating the previous search.
-noremap // //
-noremap ?? ??
 " Turn on all other features.
 let g:VeryMagicSubstituteNormalise = 1
 let g:VeryMagicSubstitute = 1
