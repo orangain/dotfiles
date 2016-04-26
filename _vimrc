@@ -255,3 +255,5 @@ endif
 
 "javacの出力をUTF-8にする
 let g:syntastic_java_javac_options="-Xlint -J-Dfile.encoding=UTF-8"
+"reviewでtextlintを使う
+let g:syntastic_review_checkers = ['textlint']
