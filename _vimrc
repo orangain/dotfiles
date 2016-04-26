@@ -173,6 +173,9 @@ nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<Enter>
 onoremap gc :<C-u>normal gc<Enter>
 
+"Shift-yで行末までコピー
+nnoremap <S-y> y$
+
 "Esc連打で検索ハイライトを消去
 nnoremap <Esc><Esc> :nohlsearch<Return><Esc>
 " 検索・置換時にvery magicを有効にし、メタ文字をエスケープせずに使えるようにする。
