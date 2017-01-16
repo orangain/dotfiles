@@ -14,4 +14,4 @@
 [color]
 	diff = auto
 [push]
-	default = simple
+	default = current
