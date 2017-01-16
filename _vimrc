@@ -243,6 +243,12 @@ let g:syntastic_aggregate_errors = 1
 "flake8で1行は99文字まで
 let g:syntastic_python_flake8_args="--max-line-length=99"
 
+"Prefer python3
+"See: http://stackoverflow.com/questions/23177561/switch-python-version-for-vim-syntastic
+if executable('/usr/local/bin/python3')
+	let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+endif
+
 if executable('eslint') || executable('jscs')
 	"Use jscs then eslint
 	let g:syntastic_javascript_checkers = ['eslint', 'jscs']
