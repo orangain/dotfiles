@@ -22,3 +22,5 @@
 	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [diff]
 	compactionHeuristic = true
+[rebase]
+	autosquash = true
