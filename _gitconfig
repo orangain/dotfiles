@@ -15,3 +15,10 @@
 	diff = auto
 [push]
 	default = current
+# See: http://qiita.com/takyam/items/d6afacc7934de9b0e85e
+[pager]
+	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[diff]
+	compactionHeuristic = true
