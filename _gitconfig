@@ -22,5 +22,7 @@
 	diff = diff-highlight | less
 [diff]
 	compactionHeuristic = true
+[ghq]
+	root = ~/go/src
 [rebase]
 	autosquash = true
