@@ -7,9 +7,11 @@ cwd=$( cd `dirname ${0}` && pwd )
 $cwd/mksymlinks.sh
 
 if [ -f ~/.bashrc ]; then
-    echo ". dotfiles/_bashrc" >> ~/.bashrc
+    echo "" >> ~/.bashrc
+    echo ". ~/dotfiles/_bashrc" >> ~/.bashrc
 else
-    echo ". dotfiles/_bashrc" >> ~/.bash_profile
+    echo "" >> ~/.bash_profile
+    echo ". ~/dotfiles/_bashrc" >> ~/.bash_profile
 fi
 
 (cd ~/dotfiles; git submodule update --init)
