@@ -1,0 +1,24 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+    // プレビューを無効化
+    "workbench.editor.enablePreview": false,
+    // JKFをJSONに関連付ける
+    "files.associations": {
+        "*.jkf": "json"
+    },
+    // ファイル一覧に表示しないファイル・ディレクトリ
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    // Pythonではpylintではなくflake8を使う
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=99"
+    ],
+    // autopep8
+    "python.formatting.autopep8Args": [
+        "--max-line-length=99"
+    ]
+}
