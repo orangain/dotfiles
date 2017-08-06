@@ -57,8 +57,8 @@ syntax enable
 
 
 """ システム
-"クリップボードを共有（Linuxでも有効に）
-set clipboard=unnamedplus
+"クリップボードを共有
+set clipboard+=unnamed
 "バックアップ（~で終わるファイル）をとらない
 set nobackup
 "上書き前にバックアップを取る。（nobackupによって上書き成功後に削除される）
