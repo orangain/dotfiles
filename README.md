@@ -25,5 +25,5 @@ mklink /d %USERPROFILE%\vimfiles dotfiles\vimfiles
 ```
 cd %USERPROFILE%\dotfiles
 git submodule update --init
-# then execute vim & type :BundleInstall
+# then execute vim & type :PluginInstall
 ```

@@ -16,5 +16,5 @@ fi
 
 (cd ~/dotfiles; git submodule update --init)
 
-vim +BundleInstall
+vim +PluginInstall
 echo "Setup completed."

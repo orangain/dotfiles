@@ -25,27 +25,27 @@ endif
 """ Vundle
 filetype off
 
-set rtp+=$MY_VIMRUNTIME/vundle
-call vundle#rc('$MY_VIMRUNTIME/bundle/')
+set rtp+=$MY_VIMRUNTIME/Vundle
+call vundle#begin('$MY_VIMRUNTIME/bundle/')
 
-Bundle 'Shougo/neocomplcache'
-Bundle 'ciaranm/inkpot'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'rhysd/clever-f.vim'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'orangain/vim-review'
-Bundle 'coot/CRDispatcher'
-Bundle 'coot/EnchantedVim'
+Plugin 'Shougo/neocomplcache'
+Plugin 'ciaranm/inkpot'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'rhysd/clever-f.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'orangain/vim-review'
+Plugin 'coot/CRDispatcher'
+Plugin 'coot/EnchantedVim'
 
 if executable('exuberant-ctags') || executable('exctags') || executable('ctags') || executable('ctags.exe') || executable('tags')
-	Bundle 'taglist.vim'
+	Plugin 'taglist.vim'
 endif
 
 """ Go lang
