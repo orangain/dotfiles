@@ -7,3 +7,5 @@ promptinit
 GIT_PS1_SHOWDIRTYSTATE=1
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 precmd () { __git_ps1 "%B%F{green}%m%f%b" ":%B%F{blue}%~%f %% %b" "%%F{red}[%s]%%f" }
+
+alias ll='ls -l'
