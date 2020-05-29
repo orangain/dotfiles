@@ -1,0 +1,9 @@
+# https://wiki.archlinux.jp/index.php/Zsh#.7E.2F.zshrc_.E3.81.AE.E8.A8.AD.E5.AE.9A
+autoload -U compinit promptinit
+compinit
+promptinit
+
+# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+precmd () { __git_ps1 "%B%F{green}%m%f%b" ":%B%F{blue}%~%f %% %b" "%%F{red}[%s]%%f" }

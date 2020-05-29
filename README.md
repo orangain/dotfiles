@@ -1,29 +1,19 @@
+# dotfiles
 
-Getting Started
----------------
+## Getting Started
 
 ```
 git clone https://github.com/orangain/dotfiles
 
-./dotfiles/setup.sh
-```
+cd dotfiles
 
-In Windows 7
-------------
+ln -sf $(pwd)/_zshrc ~/.zshrc
+ln -sf $(pwd)/_vimrc ~/.vimrc
+ln -sf $(pwd)/_gitconfig ~/.gitconfig
+mkdir -p ~/.config/git && ln -sf $(pwd)/_gitignore ~/.config/git/ignore
 
-### Run as Administrator
-
-```
-cd %USERPROFILE%\dotfiles
-mklink %USERPROFILE%\_vimrc dotfiles\_vimrc
-mklink %USERPROFILE%\_gvimrc dotfiles\_gvimrc
-mklink /d %USERPROFILE%\vimfiles dotfiles\vimfiles
-```
-
-### Run as Normal User
-
-```
-cd %USERPROFILE%\dotfiles
-git submodule update --init
-# then execute vim & type :PluginInstall
+# macOS
+mkdir -p "~/Library/Application Support/Code/User" && ln -sf $(pwd)/Code/settings.json "~/Library/Application Support/Code/User/settings.json"
+# Linux
+mkdir -p "~/.config/Code/User" && ln -sf $(pwd)/Code/settings.json "~/.config/Code/User/settings.json"
 ```

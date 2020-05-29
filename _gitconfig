@@ -6,23 +6,8 @@
 	st = status
 	pul = pull
 	dif = diff
-	co = checkout
 	b = branch
-[core]
-	excludesfile = ~/.gitignore
-	editor = vim
-[color]
-	diff = auto
-[push]
-	default = current
-# See: http://qiita.com/takyam/items/d6afacc7934de9b0e85e
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
-[diff]
-	compactionHeuristic = true
-[ghq]
-	root = ~/go/src
+	sw = switch
+	re = restore
 [rebase]
 	autosquash = true
