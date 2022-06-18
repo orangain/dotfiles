@@ -8,6 +8,9 @@
 	dif = diff
 	b = branch
 	sw = switch
-	re = restore
 [rebase]
 	autosquash = true
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
