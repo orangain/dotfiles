@@ -6,6 +6,29 @@ promptinit
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 source /usr/local/etc/bash_completion.d/git-prompt.sh
-precmd () { __git_ps1 "%B%F{green}%m%f%b" ":%B%F{blue}%~%f %% %b" "%%F{red}[%s]%%f" }
+precmd () {
+    VIRTUAL_ENV_TEXT=
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        VIRTUAL_ENV_TEXT="($(basename "$VIRTUAL_ENV"))"
+    fi
+
+    __git_ps1 "$VIRTUAL_ENV_TEXT%B%F{green}%m%f%b" ":%B%F{blue}%~%f %% %b" "%%F{red}[%s]%%f"
+}
 
 alias ll='ls -l'
+
+# https://github.com/hokaccha/nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# google-cloud-sdk
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+# java17
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+
+# Poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Python user install (Pipenv)
+export PATH=/Users/orange/Library/Python/3.9/bin:$PATH
