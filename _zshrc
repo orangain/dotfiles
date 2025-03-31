@@ -5,7 +5,11 @@ promptinit
 
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+if [[ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]]; then
+  source /usr/local/etc/bash_completion.d/git-prompt.sh
+else
+  source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+fi
 precmd () {
     VIRTUAL_ENV_TEXT=
     if [[ -n "$VIRTUAL_ENV" ]]; then
@@ -21,11 +25,13 @@ alias ll='ls -l'
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # google-cloud-sdk
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+if [[ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]]; then
+  source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+  source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+fi
 
-# java17
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+# java
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 
 # Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
